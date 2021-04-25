@@ -1,0 +1,10 @@
+import "@atlaskit/css-reset";
+import Board from "./../components/board";
+
+export default function Home() {
+  return (
+    <>
+      <Board />
+    </>
+  );
+}
