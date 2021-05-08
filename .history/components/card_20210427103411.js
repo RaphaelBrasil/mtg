@@ -21,8 +21,7 @@ export default function Card(props) {
     );
 
     setImage(result.data.image_uris.art_crop);
-    console.log(result.data);
-    //setOracle(result.data.oracle_text);
+    setOracle(result.data.oracle_text);
   }, []);
   return (
     <Draggable draggableId={props.card.id} index={props.index}>
@@ -41,9 +40,7 @@ export default function Card(props) {
             }}
             cover={<img alt={props.card.content} src={image} />}
           >
-            {
-              //oracle
-            }
+            {oracle}
           </CardAntd>
         </div>
       )}
