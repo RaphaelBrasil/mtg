@@ -1,26 +1,27 @@
-import React from "react";
-import styled from "styled-components";
-import { Card as CardAntd, Typography, Space } from "antd";
-import { Droppable } from "react-beautiful-dnd";
-import Card from "./card";
+import React from 'react'
+import styled from 'styled-components'
+import { Card as CardAntd, Typography, Space } from 'antd'
+import { Droppable } from 'react-beautiful-dnd'
+import Card from './card'
 
 const HandOfCards = styled.div`
   padding: 8px;
-`;
+`
 
-const { Title } = Typography;
+const { Title } = Typography
 
 function Zone(props) {
+  const { zone } = props
   return (
     <CardAntd
-      title={<Title>{props.zone.title}</Title>}
-      size="small"
-      style={{ backgroundColor: "lightgray" }}
+      title={<Title>{zone.title}</Title>}
+      size='small'
+      style={{ backgroundColor: 'lightgray' }}
     >
-      <Droppable droppableId={props.zone.id}>
+      <Droppable droppableId={zone.id}>
         {(provided, snapshot) => (
           <HandOfCards ref={provided.innerRef} {...provided.droppableProps}>
-            <Space direction="vertical">
+            <Space direction='vertical'>
               {props.cards.map((card, index) => (
                 <Card key={card.id} card={card} index={index} />
               ))}
@@ -30,7 +31,7 @@ function Zone(props) {
         )}
       </Droppable>
     </CardAntd>
-  );
+  )
 }
 
-export default Zone;
+export default Zone

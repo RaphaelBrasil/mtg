@@ -1,5 +1,9 @@
+import React from 'react'
+import '../styles/reset.css'
+import '../styles/globals.css'
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default MyApp

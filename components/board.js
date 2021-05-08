@@ -1,48 +1,49 @@
-import "antd/dist/antd.css";
-import { Card, Layout } from "antd";
+import React from 'react'
+import 'antd/dist/antd.css'
+import { Card as CardAntd, Layout } from 'antd'
 
-import Dnd from "./dnd";
+import Dnd from './dnd'
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Sider, Content } = Layout
 
 export default function Board() {
   return (
     <>
-      <Card
-        size="small"
+      <CardAntd
+        size='small'
         style={{
-          height: "100vh",
-          width: "100vw",
+          height: '100vh',
+          width: '100vw',
         }}
       >
-        <Card
+        <CardAntd
           style={{
-            backgroundColor: "gray",
-            borderRadius: "5px",
-            height: "36vh",
+            backgroundColor: 'gray',
+            borderRadius: '5px',
+            height: '36vh',
           }}
         >
           P2 Board
-        </Card>
-        <Card
+        </CardAntd>
+        <CardAntd
           style={{
-            backgroundColor: "gray",
-            borderRadius: "5px",
-            height: "38vh",
+            backgroundColor: 'gray',
+            borderRadius: '5px',
+            height: '38vh',
           }}
         >
           P1 Board
-        </Card>
-        <Card
+        </CardAntd>
+        <CardAntd
           style={{
-            backgroundColor: "blue",
-            borderRadius: "5px",
-            height: "22vh",
+            backgroundColor: 'blue',
+            borderRadius: '5px',
+            height: '22vh',
           }}
         >
           <Dnd />
-        </Card>
-      </Card>
+        </CardAntd>
+      </CardAntd>
     </>
-  );
+  )
 }
